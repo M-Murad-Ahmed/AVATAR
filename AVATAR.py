@@ -126,7 +126,6 @@ if __name__ == '__main__':
                     cv2.setMouseCallback('Warped', get_warped_hash)
                     # show the user the screen
                     cv2.imshow('Warped', frame)
-                    print("what")
                     # loop all of above until user quits program
                     if cv2.waitKey(1) == 1048689:
                         break
