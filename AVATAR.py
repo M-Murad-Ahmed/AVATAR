@@ -127,7 +127,6 @@ if __name__ == '__main__':
                     # show the user the screen
                     cv2.imshow('Warped', frame)
                     print("what")
-                    print("trying to fix")
                     # loop all of above until user quits program
                     if cv2.waitKey(1) == 1048689:
                         break
