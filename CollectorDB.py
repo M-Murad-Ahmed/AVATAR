@@ -26,8 +26,4 @@ class CollectorDB:
     def get_all_games(self):
         self.cursor.execute("SELECT * FROM Games")
         data = self.cursor.fetchall()
-        for d in data:
-            print("Name: " + d[0])
-            print("Developer: " + d[2])
-            print("Publisher: " + d[3])
-            print("")
+        return data
