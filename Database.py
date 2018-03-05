@@ -2,11 +2,6 @@ import sqlite3
 
 p = print
 
-name = ''
-dev = ''
-pub = ''
-platform = ''
-
 
 class DataBase:
 
@@ -36,7 +31,6 @@ class DataBase:
         best_distance = 999
         # set the max distance a hash can be to be considered close to a game in the database
         max_dist = 5
-        game_name = ''
         # iterate through the games to find which has the lowest hamming distance to the original hash
         for d in data:
             # assign the current hash
@@ -50,26 +44,11 @@ class DataBase:
         # retrieve from the database the hash which was closest to the one we identified
         self.cursor.execute("SELECT * FROM Games WHERE Hash = '" + best_hash + "'")
         data = self.cursor.fetchall()
-        # iterate through the game details
-        for d in data:
-            global name
-            name = d[1]
-            game_name = name
-            global dev
-            dev = d[2]
-            global pub
-            pub = d[3]
-            global platform
-            platform = d[4]
-            if name is not None:
-                p(name)
-                p(pub)
-                p(dev)
-                p(platform)
-                p('')
         # return the name of the game for further processing
-        return game_name
-
+        if data is not None:
+            return data
+        else:
+            return None
     """
     this method calculates hamming distance between a pair of hexadecimal hashes
     converts each hex value (0-9, A-F) into the respective denary value

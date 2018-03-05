@@ -8,7 +8,7 @@ from ImageHasher import ImageHasher
 from CollectorDB import CollectorDB
 from Scrape import Scraper
 from tkinter import *
-Warped = None
+warped = None
 p = print
 
 
@@ -74,25 +74,40 @@ def get_colls():
     coll_root = Tk()
     coll_label = Label(coll_root, text=output)
     coll_label.pack()
-    root.mainloop()
+    coll_root.mainloop()
 
 
 def get_warped_hash(event, x_cords, y_cords, flag, void):
-    if event == cv2.EVENT_LBUTTONDOWN:
-        this_hash = image_hasher.generate_hash(warped)
-        name = myDb.fetch_hash(this_hash)
-        game = collectordb.check_game(name)
-        search_query = ''
-        query_words = name.split(' ')
-        for words in query_words:
-            search_query += words + '-'
+    try:
 
-        if game is not None:
-            p('Game is in collectors database.')
-            p('')
-        elif name is not "":
-            # scrape_game(search_query, name)
-            myScraper.scrape_game(search_query, name)
+        if event == cv2.EVENT_LBUTTONDOWN:
+            this_hash = image_hasher.generate_hash(warped)
+            game_info = myDb.fetch_hash(this_hash)
+            if game_info is not []:
+                found_game = game_info[0]
+                #p (found_game[1])
+                name = found_game[1]
+                game = collectordb.check_game(name)
+                search_query = ''
+                query_words = name.split(' ')
+                for words in query_words:
+                    search_query += words + '-'
+
+                if game is not None:
+                    output = "Game is found to be: "
+                    output = output + "Name: " + found_game[1] + "\n"
+                    output = output + "Developer: " + found_game[2] + "\n"
+                    output = output + "Publisher: " + found_game[3] + "\n"
+                    output = output + "Game is in your database \n"
+                    found_root = Tk()
+                    found_label = Label(found_root, text=output)
+                    found_label.pack()
+                    found_root.mainloop()
+                elif name is not "":
+                    # scrape_game(search_query, name)
+                    myScraper.scrape_game(search_query, name)
+    except IndexError:
+        p()
 
 
 # todo add GUI function
