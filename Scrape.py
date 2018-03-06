@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
-
+from tkinter import *
 p = print
 
 
@@ -29,15 +29,23 @@ class Scraper:
         real_name = real_name.lower()
         check_name = real_name.split(" ")
         count = 0
+        coll_root = Tk()
+        output = ""
         # check if the game retrieved matches our search criteria
         for words in check_name:
             if words in lower_name:
                 count = count + 1
         # if it does, inform user of the name, price and rating
         if count == len(check_name):
-            print(name + " available for " + price + " at " + url)
-            print(rating, "out of 5 stars")
+            # print(name + " available for " + price + " at " + url)
+            output = output + name + " available for " + price + " at " + url + "\n"
+            output = output + rating + "out of 5 stars\n"
+            # print(rating, "out of 5 stars")
             p("")
         else:
-            print("Unable to find game at " + url)
-            p("")
+            output = "Unable to find game at " + url +"\n"
+            # print("Unable to find game at " + url)
+            # p("")
+        coll_label = Label(coll_root, text=output)
+        coll_label.pack()
+        coll_root.mainloop()

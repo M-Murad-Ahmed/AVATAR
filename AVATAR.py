@@ -85,7 +85,7 @@ def get_warped_hash(event, x_cords, y_cords, flag, void):
             game_info = myDb.fetch_hash(this_hash)
             if game_info is not []:
                 found_game = game_info[0]
-                #p (found_game[1])
+                # p (found_game[1])
                 name = found_game[1]
                 game = collectordb.check_game(name)
                 search_query = ''

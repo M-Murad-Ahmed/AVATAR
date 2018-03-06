@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7bad7abf-5962-4c1e-b3d7-f6ceefeb0ffd" name="Default" comment="" />
+    <list default="true" id="7bad7abf-5962-4c1e-b3d7-f6ceefeb0ffd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drawn.jpg" afterPath="$PROJECT_DIR$/drawn.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AVATAR.py" afterPath="$PROJECT_DIR$/AVATAR.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scrape.py" afterPath="$PROJECT_DIR$/Scrape.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,16 +15,28 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/AVATAR$AVATAR__1_.coverage" NAME="AVATAR (1) Coverage Results" MODIFIED="1520286363014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AVATAR" />
-    <SUITE FILE_PATH="coverage/AVATAR$AVATAR.coverage" NAME="AVATAR Coverage Results" MODIFIED="1520329996625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AVATAR$AVATAR.coverage" NAME="AVATAR Coverage Results" MODIFIED="1520344301508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AVATAR.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AVATAR.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AVATAR.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1199">
-              <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+            <state relative-caret-position="0">
+              <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scrape.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Scrape.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,6 +85,7 @@
         <option value="$PROJECT_DIR$/AVATAR/Database.py" />
         <option value="$PROJECT_DIR$/AVATAR/AVATAR.py" />
         <option value="$PROJECT_DIR$/AVATAR.py" />
+        <option value="$PROJECT_DIR$/Scrape.py" />
       </list>
     </option>
   </component>
@@ -811,25 +828,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scrape.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AVATAR/Database.py" />
     <entry file="file://$PROJECT_DIR$/AVATAR/CollectorDB.py" />
     <entry file="file://$PROJECT_DIR$/AVATAR/Scrape.py" />
     <entry file="file://$PROJECT_DIR$/AVATAR/AVATAR.py" />
     <entry file="file://$PROJECT_DIR$/AVATAR.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1199">
-          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        <state relative-caret-position="0">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrape.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
