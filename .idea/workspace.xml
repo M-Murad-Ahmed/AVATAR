@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bad7abf-5962-4c1e-b3d7-f6ceefeb0ffd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drawn.jpg" afterPath="$PROJECT_DIR$/drawn.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AVATAR.py" afterPath="$PROJECT_DIR$/AVATAR.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scrape.py" afterPath="$PROJECT_DIR$/Scrape.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EdgeDetection.py" afterPath="$PROJECT_DIR$/EdgeDetection.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,10 +17,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AVATAR.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AVATAR.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AVATAR.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
+            <state relative-caret-position="63">
               <caret line="80" column="8" lean-forward="false" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
               <folding />
             </state>
@@ -52,6 +49,16 @@
                 <marker date="1520293520879" expanded="true" signature="1713:1765" ph="SELECT * FRO... Games" />
                 <marker date="1520293520879" expanded="true" signature="1779:1831" ph="SELECT * FRO... Games" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EdgeDetection.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EdgeDetection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,7 +98,6 @@
       <list>
         <option value="$PROJECT_DIR$/ImageWarper.py" />
         <option value="$PROJECT_DIR$/ImageCorrection.py" />
-        <option value="$PROJECT_DIR$/EdgeDetection.py" />
         <option value="$PROJECT_DIR$/CollectorDB.py" />
         <option value="$PROJECT_DIR$/ImageHasher.py" />
         <option value="$PROJECT_DIR$/AVATAR/CollectorDB.py" />
@@ -101,6 +107,7 @@
         <option value="$PROJECT_DIR$/Database.py" />
         <option value="$PROJECT_DIR$/Scrape.py" />
         <option value="$PROJECT_DIR$/AVATAR.py" />
+        <option value="$PROJECT_DIR$/EdgeDetection.py" />
       </list>
     </option>
   </component>
@@ -517,9 +524,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -587,9 +592,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="27" column="61" lean-forward="false" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -782,16 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EdgeDetection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ImageCorrection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -864,8 +857,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AVATAR.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
+        <state relative-caret-position="63">
           <caret line="80" column="8" lean-forward="false" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EdgeDetection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="17" />
           <folding />
         </state>
       </provider>

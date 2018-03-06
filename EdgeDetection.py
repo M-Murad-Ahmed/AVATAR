@@ -63,5 +63,4 @@ class EdgeDetection:
     @staticmethod
     def draw_cnts(game_cnts, frame):
         frame = cv2.drawContours(frame, [game_cnts], -1, (0, 255, 0), 2)
-        cv2.imwrite('drawn.jpg', frame)
         return frame
