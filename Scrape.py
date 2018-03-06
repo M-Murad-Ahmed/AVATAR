@@ -21,6 +21,7 @@ class Scraper:
         price = soup.find('span', class_='ac-product-price__amount').get_text()
         name = soup.find('div', class_='ac-product-name ac-product-card__name').get_text()
         rating = soup.find('div', class_='ac-product-card__rating').get_text()
+        # splitting string to find the 'star' rating of the game
         rating = rating.split(" ")
         rating = rating[1]
         rating = rating.split(".")
@@ -28,9 +29,9 @@ class Scraper:
         lower_name = str(name).lower()
         real_name = real_name.lower()
         check_name = real_name.split(" ")
-        count = 0
         coll_root = Tk()
         output = ""
+        count = 0
         # check if the game retrieved matches our search criteria
         for words in check_name:
             if words in lower_name:
@@ -39,11 +40,11 @@ class Scraper:
         if count == len(check_name):
             # print(name + " available for " + price + " at " + url)
             output = output + name + " available for " + price + " at " + url + "\n"
-            output = output + rating + "out of 5 stars\n"
+            output = output + rating + " out of 5 stars\n"
             # print(rating, "out of 5 stars")
             p("")
         else:
-            output = "Unable to find game at " + url +"\n"
+            output = "Unable to find game at " + url + "\n"
             # print("Unable to find game at " + url)
             # p("")
         coll_label = Label(coll_root, text=output)

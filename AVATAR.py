@@ -14,7 +14,7 @@ p = print
 
 def scan_game():
     cap = cv2.VideoCapture(1)
-    p("press command q to exit")
+    # p("press command q to exit")
     while cap.isOpened():
         ret, frame = cap.read()
         if frame is not None:
@@ -35,7 +35,7 @@ def scan_game():
                 # identifies the contour of the game within the contours of the image
                 game_cnts = edge_detection.find_game_cnt(cnts)
                 # creates a named window called warped
-                cv2.namedWindow('Warped')
+                cv2.namedWindow('Warped', cv2.WINDOW_GUI_NORMAL)
                 # if there is a game contour within the image...
                 if game_cnts is not None:
                     # draw the contour of the game box onto the screen
@@ -50,7 +50,7 @@ def scan_game():
             cv2.imshow('Warped', frame)
             # loop all of above until user quits program
             if cv2.waitKey(1) == 1048689:
-                break
+                sys.exit()
 
 
 ''' 
@@ -79,7 +79,6 @@ def get_colls():
 
 def get_warped_hash(event, x_cords, y_cords, flag, void):
     try:
-
         if event == cv2.EVENT_LBUTTONDOWN:
             this_hash = image_hasher.generate_hash(warped)
             game_info = myDb.fetch_hash(this_hash)
@@ -104,13 +103,11 @@ def get_warped_hash(event, x_cords, y_cords, flag, void):
                     found_label.pack()
                     found_root.mainloop()
                 elif name is not "":
-                    # scrape_game(search_query, name)
                     myScraper.scrape_game(search_query, name)
     except IndexError:
-        p()
+        p("No game found")
 
 
-# todo add GUI function
 if __name__ == '__main__':
     myScraper = Scraper()
     myDb = DataBase('avatar.db')
