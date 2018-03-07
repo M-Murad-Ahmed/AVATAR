@@ -24,7 +24,6 @@ def scan_game():
             ratio = frame.shape[0] / 300.0
             # set size of frame visible to user to be 300 pixels in height
             frame = imutils.resize(frame, height=300)
-
             if ret:
                 # apply image correction techniques (gray scale, bilateral filter and adaptive thresholding)
                 corrected_image = ImageCorrection.get_gray(self=imageCorrection, frame=frame)
