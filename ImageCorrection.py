@@ -1,6 +1,5 @@
 import cv2
 
-
 class ImageCorrection:
 
     """
