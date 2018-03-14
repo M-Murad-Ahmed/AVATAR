@@ -108,19 +108,27 @@ def get_warped_hash(event, x_cords, y_cords, flag, void):
 
 
 if __name__ == '__main__':
+    # initiate web scraping object
     myScraper = Scraper()
+    # avatar database access object
     myDb = DataBase('avatar.db')
+    # collector database object
     collectordb = CollectorDB('collector.db')
+    # image correction object
     imageCorrection = ImageCorrection()
+    # edge detection object
     edge_detection = EdgeDetection()
+    # image warping object
     image_warper = ImageWarper()
+    # image hashing object
     image_hasher = ImageHasher()
+    # root for Tk object
     root = Tk()
     topframe = Frame(root)
     topLabel = Label(root, text="What would you like to do?")
     topLabel.grid(row=0, column=0)
     view = Button(root, text="View", command=get_colls)
     view.grid(row=1, column=0)
-    scan = Button(root, text="scan", command=scan_game)
+    scan = Button(root, text="Scan", command=scan_game)
     scan.grid(row=1, column=1)
     root.mainloop()

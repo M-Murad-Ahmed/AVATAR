@@ -20,7 +20,6 @@ class MyTest(unittest.TestCase):
     image_hasher = ImageHasher()
     test_image = cv2.imread("warped.jpg")
     second_test = cv2.imread("ow.jpg")
-    third_test = cv2.imread("dilated.jpg")
 
     def test(self):
         # test collector string
@@ -40,4 +39,6 @@ class MyTest(unittest.TestCase):
         self.assertIsInstance(self.myDb.fetch_hash("2d2ec9e064603836"), list)
         # cv2 should return images
         self.assertIsInstance(self.edge_detection.canny_edge(self.second_test), np.ndarray)
+
+
 
