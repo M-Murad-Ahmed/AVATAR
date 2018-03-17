@@ -40,5 +40,7 @@ class MyTest(unittest.TestCase):
         # cv2 should return images
         self.assertIsInstance(self.edge_detection.canny_edge(self.second_test), np.ndarray)
 
+        self.assertTrue(self.myDb.ham_dst("9897f4b0f0cc0ef8", "dd9237b0704c4ed9"))
+
 
 

@@ -27,3 +27,4 @@ class CollectorDB:
         self.cursor.execute("SELECT * FROM Games")
         data = self.cursor.fetchall()
         return data
+

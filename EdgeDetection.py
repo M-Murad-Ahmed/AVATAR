@@ -10,10 +10,12 @@ class EdgeDetection:
     Once it has found the edges, it will identify the contour which represents the game contour
     and draw this contour onto the original frame
     """
+
     '''
     applies canny edge detection to the frame passed, min is set to 30 and max is set to 200
     returns the canny edge image
     '''
+
     def canny_edge(self, frame):
         canny = cv2.Canny(frame, 30, 200)
         return self.dilate(canny)

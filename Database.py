@@ -25,7 +25,7 @@ class DataBase:
         # p(hash_value)
         self.cursor.execute("SELECT Hash FROM Games WHERE Hash LIKE '" + hash_value[:1] + "%" + "'")
         data = self.cursor.fetchall()
-        # set the default best hash to nothin
+        # set the default best hash to nothing
         best_hash = ''
         # set the best hamming distance to any value > best value
         best_distance = 999
@@ -67,7 +67,7 @@ class DataBase:
             # if the difference between the two values is more than 2, add 1 to the hamming distance
             if self.compare(v1, v2) > 2:
                 hamming_dist = hamming_dist + 1
-        # print("hamming distance is ", hamming_dist)
+        print("hamming distance is ", hamming_dist)
         return hamming_dist
 
     @staticmethod
