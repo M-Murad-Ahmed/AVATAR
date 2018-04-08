@@ -9,6 +9,7 @@ from CollectorDB import CollectorDB
 from Scrape import Scraper
 from tkinter import *
 warped = None
+frame = None
 p = print
 
 
@@ -16,6 +17,7 @@ def scan_game():
     cap = cv2.VideoCapture(1)
     # p("press command q to exit")
     while cap.isOpened():
+        global frame
         ret, frame = cap.read()
         if frame is not None:
             # keep a shallow copy of the frame (required for warping)
@@ -49,7 +51,8 @@ def scan_game():
             cv2.imshow('Warped', frame)
             # loop all of above until user quits program
             if cv2.waitKey(1) == 1048689:
-                sys.exit()
+                break
+    root.destroy()
 
 
 ''' 
@@ -63,7 +66,6 @@ def get_colls():
     text = collectordb.get_all_games()
     for item in text:
         game_coll.append(item)
-    # p(game_coll)
     output = "Games in collectors database: \n\n"
     for game in game_coll:
         output = output + "Name: " + game[0] + "\n"
@@ -73,6 +75,7 @@ def get_colls():
     coll_root = Tk()
     coll_label = Label(coll_root, text=output)
     coll_label.pack()
+    coll_root.title("Collector's database")
     coll_root.mainloop()
 
 
@@ -83,7 +86,6 @@ def get_warped_hash(event, x_cords, y_cords, flag, void):
             game_info = myDb.fetch_hash(this_hash)
             if game_info is not []:
                 found_game = game_info[0]
-                # p (found_game[1])
                 name = found_game[1]
                 game = collectordb.check_game(name)
                 search_query = ''
@@ -92,22 +94,29 @@ def get_warped_hash(event, x_cords, y_cords, flag, void):
                     search_query += words + '-'
 
                 if game is not None:
-                    output = "Game is found to be: "
-                    output = output + "Name: " + found_game[1] + "\n"
-                    output = output + "Developer: " + found_game[2] + "\n"
-                    output = output + "Publisher: " + found_game[3] + "\n"
-                    output = output + "Game is in your database \n"
-                    found_root = Tk()
-                    found_label = Label(found_root, text=output)
-                    found_label.pack()
-                    found_root.mainloop()
+                    font = cv2.FONT_HERSHEY_COMPLEX
+                    colour = (0, 0, 0)
+                    cv2.putText(frame, 'Game: ' + found_game[1], (9, 28), font, 0.60, colour, 2,
+                                cv2.LINE_AA)
+                    cv2.putText(frame, 'Developer: ' + found_game[2], (9, 50), font, 0.60,
+                                colour, 2, cv2.LINE_AA)
+                    cv2.putText(frame, 'Publisher: ' + found_game[3], (9, 77), font, 0.60,
+                                colour, 2, cv2.LINE_AA)
+                    cv2.putText(frame, 'Game is in database.', (9, 99), font, 0.60, colour,
+                                2, cv2.LINE_AA)
+                    cv2.imshow("Warped", frame)
+                    cv2.waitKey(0)
                 elif name is not "":
                     myScraper.scrape_game(search_query, name)
     except IndexError:
-        p("No game found")
+        font = cv2.FONT_HERSHEY_COMPLEX
+        colour = (0, 0, 0)
+        cv2.putText(frame, 'No game found ', (9, 28), font, 0.55, colour, 2,
+                    cv2.LINE_AA)
 
 
 if __name__ == '__main__':
+
     # initiate web scraping object
     myScraper = Scraper()
     # avatar database access object
@@ -127,8 +136,10 @@ if __name__ == '__main__':
     topframe = Frame(root)
     topLabel = Label(root, text="What would you like to do?")
     topLabel.grid(row=0, column=0)
-    view = Button(root, text="View", command=get_colls)
+    view = Button(root, text="View collection", command=get_colls)
     view.grid(row=1, column=0)
-    scan = Button(root, text="Scan", command=scan_game)
+    scan = Button(root, text="Scan a game", command=scan_game)
     scan.grid(row=1, column=1)
+    root.title("AVATAR")
     root.mainloop()
+
