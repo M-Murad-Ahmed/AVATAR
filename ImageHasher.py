@@ -1,6 +1,6 @@
 
-import Image
 import imagehash
+from PIL import Image
 
 
 class ImageHasher:

@@ -14,6 +14,7 @@ p = print
 
 
 def scan_game():
+    # if you do not have a secondary camera, change argument in line 18 to 0, i.e. cv2.videoCapture(0)
     cap = cv2.VideoCapture(1)
     # p("press command q to exit")
     while cap.isOpened():

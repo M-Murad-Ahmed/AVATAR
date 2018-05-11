@@ -65,11 +65,7 @@ class DataBase:
             v1 = int(hash1[x], 16)
             v2 = int(hash2[x], 16)
             # if the difference between the two values is more than 2, add 1 to the hamming distance
-            if self.compare(v1, v2) > 2:
+            if abs(v1-v2) > 2:
                 hamming_dist = hamming_dist + 1
         # print("hamming distance is ", hamming_dist)
         return hamming_dist
-
-    @staticmethod
-    def compare(a, b):
-        return abs(a-b)
